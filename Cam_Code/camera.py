@@ -1,6 +1,7 @@
-#pip install pillow
-#pip install opencv-python
-#pip install numpy
+# pip install pillow
+# pip install opencv-python
+# pip install numpy
+# pip install Tkinter
 
 import cv2
 import tkinter as tk
