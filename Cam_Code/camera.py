@@ -1,7 +1,6 @@
-# pip install pillow
-# pip install opencv-python
-# pip install numpy
-# pip install Tkinter
+#pip install pillow
+#pip install opencv-python
+#pip install numpy
 
 import cv2
 import tkinter as tk
@@ -34,12 +33,7 @@ class Camera:
 
         cv2.setMouseCallback('PBCamera', self.mouseEv)
 
-        self.bImg = cv2.imread('Cam_Code\folder95.png')
-        if self.bImg is not None:
-            self.bImg = cv2.resize(self.bImg, (75, 75), interpolation=cv2.INTER_LINEAR)
-        else:
-            print("cade a imagem meu ????")
-
+        self.bImg = cv2.resize(cv2.imread('Cam_Code/assets/folder95.png'), (75, 75), interpolation = cv2.INTER_LINEAR)
 
     def na(self, x):
         pass
@@ -150,3 +144,4 @@ class Camera:
 
 camera = Camera()
 camera.exe()
+       
