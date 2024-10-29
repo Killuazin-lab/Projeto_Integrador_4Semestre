@@ -12,6 +12,11 @@ Este projeto tem o foco implementar um sistema de **controle de qualidade automa
 - **Processamento em Tempo Real**
 - **Tratamento de Defeitos**
   
+## Protótipo 📷
+
+![Maquina 2](https://github.com/user-attachments/assets/9c3cc6d8-02c0-4f45-be31-d96a73c86a0b)
+![Maquina](https://github.com/user-attachments/assets/eb78bfed-0d44-4fae-979d-39fa66203526)
+
 
 ## 🛠️ Tecnologias Utilizadas
 
