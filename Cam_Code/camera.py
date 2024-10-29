@@ -7,7 +7,7 @@ import cv2
 import tkinter as tk
 from PIL import Image, ImageTk
 from tkinter import Label
-from selectTk import SelecDir as sd
+from selecttk import SelecDir as sd
 import os
 import time
 import numpy as np
@@ -34,7 +34,12 @@ class Camera:
 
         cv2.setMouseCallback('PBCamera', self.mouseEv)
 
-        self.bImg = cv2.resize(cv2.imread('assets/folder95.png'), (75, 75), interpolation = cv2.INTER_LINEAR)
+        self.bImg = cv2.imread('Cam_Code\folder95.png')
+        if self.bImg is not None:
+            self.bImg = cv2.resize(self.bImg, (75, 75), interpolation=cv2.INTER_LINEAR)
+        else:
+            print("cade a imagem meu ????")
+
 
     def na(self, x):
         pass
