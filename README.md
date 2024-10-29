@@ -1,7 +1,6 @@
 # Controle de Qualidade Automatizado com Visão Computacional 📷
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-orange)
 
 ## 📜 Sobre o Projeto
 
