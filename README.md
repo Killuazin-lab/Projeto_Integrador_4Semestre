@@ -8,16 +8,18 @@ Este projeto tem o foco implementar um sistema de **controle de qualidade automa
 
 ## 🎯 Funcionalidades
 
-- **Detecção de Defeitos**: Identifica automaticamente defeitos, como rachaduras, arranhões e deformações.
-- **Processamento em Tempo Real**: 
-- **Integração com Alertas**: Alerta automaticamente a equipe em caso de falhas detectadas no material.
+- **Detecção de Defeitos**
+- **Processamento em Tempo Real**
+- **Tratamento de Defeitos**
+  
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Python** com **OpenCV** 
 - **Machine Learning** 
-- **TensorFlow/PyTorch** 
+- **TensorFlow**
+- **Keras**
 
-## 🌌 Estrutura do Projeto
 
-```plaintext
+
+
