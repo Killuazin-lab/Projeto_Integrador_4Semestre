@@ -1,4 +1,4 @@
-# Controle de Qualidade Automatizado com Visão Computacional 📷
+# Controle de Qualidade por Câmera 📷
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
 
