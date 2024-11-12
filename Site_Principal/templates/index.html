@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Qualidade</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <header>
+        <h1>Monitoramento de Qualidade</h1>
+    </header>
+
+    <section class="Farol">
+        <div class="luz verde" id="luz-verde"></div>
+        <div class="luz amarela" id="luz-amarela"></div>
+        <div class="luz vermelha" id="luz-vermelha"></div>
+    </section>
+
+    <main>
+        <section class="video-section">
+            <div class="video-container">
+                <h2>Live</h2>
+                <img src="{{ url_for('video_feed') }}" alt="Feed da câmera" />
+            </div>
+            <button onclick="captureImage()">Capturar Imagem</button>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p> Desenvolvido pelo Grupo 3 - 2024 </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
