@@ -13,8 +13,8 @@
 
     <section class="Farol">
         <div class="luz verde" id="luz-verde"></div>
-        <div class="luz amarela" id="luz-amarela"></div>
         <div class="luz vermelha" id="luz-vermelha"></div>
+        <div class="luz amarela" id="luz-amarela"></div>
     </section>
 
     <main>
@@ -23,10 +23,11 @@
                 <h2>Live</h2>
                 <img src="{{ url_for('video_feed') }}" alt="Feed da câmera" />
             </div>
-            <button onclick="captureImage()">Capturar Imagem</button>
         </section>
         
     </main>
+
+    <button onclick="goToAboutPage()">Conheça nossa equipe</button>
 
     <footer>
         <p> Desenvolvido pelo Grupo 3 - 2024 </p>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, send_from_directory, jsonify
+from flask import Flask, render_template, Response, send_from_directory, jsonify, request
 import cv2
 import os
 import time
@@ -6,6 +6,9 @@ import tkinter as tk
 from tkinter import filedialog
 
 app = Flask(__name__, template_folder='../Site_Principal/templates')
+
+# Variável global para armazenar o status atual
+status_atual = ""
 
 # Função para capturar a câmera
 def gen_frames():  
@@ -30,6 +33,20 @@ def select_directory():
     directory = filedialog.askdirectory(title="Selecione uma pasta")
     return directory
 
+#conexão com a IA
+
+@app.route('/atualizar_status', methods=['POST'])
+def atualizar_status():
+    global status_atual
+    dados = request.json
+    status_atual = dados.get("status")  # Exemplo: "guarana" ou "coca"
+    return jsonify({"message": "Status atualizado com sucesso!"}), 200
+
+@app.route('/obter_status', methods=['GET'])
+def obter_status():
+    global status_atual
+    return jsonify({"status": status_atual})
+
 # Rota para servir a página HTML
 @app.route('/')
 def index():
@@ -40,22 +57,27 @@ def index():
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
+
 # Rota para capturar a imagem
-@app.route('/capture_image')
-def capture_image():
-    cap = cv2.VideoCapture(0)
-    success, frame = cap.read()
-    if success:
-        timestamp = int(time.time())
-        directory = select_directory()
-        if directory:
-            filename = os.path.join(directory, f"captured_{timestamp}.jpg")
-            cv2.imwrite(filename, frame)
-            return jsonify({"message": f"Imagem capturada: {filename}"})
-        else:
-            return jsonify({"message": "Nenhum diretório selecionado"}), 400
-    else:
-        return jsonify({"message": "Falha ao capturar a imagem"}), 500
+# @app.route('/capture_image')
+# def capture_image():
+#     cap = cv2.VideoCapture(0)
+#     success, frame = cap.read()
+#     if success:
+#         timestamp = int(time.time())
+#         directory = select_directory()
+#         if directory:
+#             filename = os.path.join(directory, f"captured_{timestamp}.jpg")
+#             cv2.imwrite(filename, frame)
+#             return jsonify({"message": f"Imagem capturada: {filename}"})
+#         else:
+#             return jsonify({"message": "Nenhum diretório selecionado"}), 400
+#     else:
+#         return jsonify({"message": "Falha ao capturar a imagem"}), 500
 
 # Rota para servir o arquivo JS
 @app.route('/js/<path:filename>')

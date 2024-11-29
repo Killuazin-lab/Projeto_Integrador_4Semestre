@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="{{ url_for('serve_css', filename='styleSobre.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sobre Nós</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sobre-equipe">
+            <h2>Quem Somos?</h2>
+            <p>Somos o Grupo 3, uma Equipe dedicada ao desenvolvimento de soluções inovadoras para o monitoramento da qualidade em linhas de produção.</p>
+            
+            <h2>Nosso Objetivo</h2>
+            <p>Nosso sistema visa integrar inteligência artificial com ferramentas de fácil uso, otimizando a identificação de produtos defeituosos para melhor controle do sistema de produção</p>
+        </section>
+
+        <section class="foto-grupo">
+            <h2>Nosso Time</h2>
+            <img src="{{ url_for('static', filename='assets/grupo.jpg') }}" alt="Foto do Grupo" class="foto-grupo">
+        </section>
+
+        <section class="integrantes">
+            <h2>Conheça o Time</h2>
+            <ul>
+                <li><strong>Breno Amorim</strong>: Programador Web. </li>
+                <li><strong>Carlos Eduardo</strong>: Construtor do Circuito. </li>
+                <li><strong>Felipe Almeida:</strong>: Programador Rede Neural (IA). </li>
+                <li><strong>Fernando Canario</strong>: Acabamento modelo fisico. </li>
+                <li><strong>Gabriel Delinardi</strong>: Escrivão e Documentador. </li>
+                <li><strong>Gabriel Sodré</strong>: Pesquisador e Modelador. </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido pelo Grupo 3 - 2024</p>
+    </footer>
+</body>
+</html>

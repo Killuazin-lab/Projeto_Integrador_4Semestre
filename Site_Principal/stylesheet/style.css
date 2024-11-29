@@ -40,11 +40,11 @@ h1 {
   background-color: #333; /* Apagada inicialmente */
 }
 
-.amarela {
+.vermelha {
   background-color: #333; /* Apagada inicialmente */
 }
 
-.vermelha {
+.amarela {
   background-color: #333; /* Apagada inicialmente */
 }
 
@@ -64,8 +64,8 @@ main {
 }
 
 .video-container {
-  width: 640px;
-  height: 360px;
+  width: 660px;
+  height: 440px;
   background-color: #ddd;
   display: flex;
   justify-content: center;
@@ -73,6 +73,34 @@ main {
   font-size: 18px;
   color: #555;
 }
+
+.video-container img {
+  width: 550px; /* Ajuste o tamanho da câmera */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Centraliza a câmera no contêiner */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  border: 2px solid #ccc; /* Opcional: borda para destacar o feed */
+  border-radius: 8px; /* Deixe os cantos arredondados */
+}
+
+button {
+  display: block; /* Faz o botão ocupar a largura necessária e permite centralizar */
+  margin: 20px auto; /* Centraliza horizontalmente e dá espaço em cima e embaixo */
+  padding: 10px 20px; /* Define o espaçamento interno do botão */
+  background-color: #007BFF; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 20px; /* Deixa o botão arredondado */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+  transition: all 0.3s ease; /* Adiciona transição suave para o hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho no hover */
+}
+
 
 footer {
   text-align: center;
@@ -83,3 +111,4 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
